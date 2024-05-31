@@ -43,7 +43,7 @@ const ToysGames = () => {
 
   return (
     <>
-        <section className='toys-games-sec pt-3' style={{background: "#fff"}}>
+        <section className='toys-games-sec pt-3 m-3' style={{background: "#fff"}}>
             <div className='toys-games-container' style={{ width: "95%", margin: "0 auto" }}>
                 <h4>Best Sellers in Toys & Games</h4>
                 <Slider {...settings}>

@@ -7,6 +7,7 @@ import BestSellers from './Grocery';
 import Clothing from './Clothing';
 import ToysGames from './ToysGames';
 import Beauty from './Beauty';
+import Footer from './Footer';
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
             <Clothing/>
             <ToysGames/>
             <Beauty/>
+            <Footer/>
         </section>
         
     </>

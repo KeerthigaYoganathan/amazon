@@ -43,7 +43,7 @@ const Beauty = () => {
 
   return (
     <>
-        <section className='beauty-sec pt-3' style={{background: "#fff"}}>
+        <section className='beauty-sec pt-3 m-3' style={{background: "#fff"}}>
             <div className='beauty-container' style={{ width: "95%", margin: "0 auto" }}>
                 <h4>Best Sellers in Beauty & Personal Care</h4>
                 <Slider {...settings}>

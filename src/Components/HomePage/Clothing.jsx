@@ -43,7 +43,7 @@ const Clothing = () => {
 
   return (
     <>
-        <section className='clothing-sec my-3' style={{background: "#fff"}}>
+        <section className='clothing-sec m-3' style={{background: "#fff"}}>
             <div className='clothing-container' style={{ width: "95%", margin: "0 auto" }}>
                 <h4 className='pt-3'>Best Sellers in Clothing & Accessories</h4>
                 <Slider {...settings}>

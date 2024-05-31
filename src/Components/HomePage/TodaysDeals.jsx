@@ -42,7 +42,7 @@ const TodaysDeals = () => {
 
   return (
     <>
-      <section className="todays-deals-sec my-3">
+      <section className="todays-deals-sec m-3">
         <div
           className="todays-deals-container" 
           style={{ width: "95%", margin: "0 auto"}}

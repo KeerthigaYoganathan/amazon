@@ -44,7 +44,7 @@ const Grocery = () => {
 
   return (
     <>
-        <section className='best-sellers-sec pt-3' style={{background: "#fff"}}>
+        <section className='best-sellers-sec pt-3 m-3' style={{background: "#fff"}}>
             <div className='best-sellers-container' style={{ width: "95%", margin: "0 auto" }}>
                 <h4>Best Sellers in Grocery & Gourmet Food</h4>
                 <Slider {...settings}>

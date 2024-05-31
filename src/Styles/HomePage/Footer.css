@@ -1,0 +1,27 @@
+.footer-sec{
+    margin-top: 12px;
+}
+.footer-back-to-top{
+    color: #fff;
+    text-align: center;
+}
+.footer-back-to-top p{
+    font-size: 16px;
+    padding: 0.8rem;
+}
+.footer-top{
+    background: #232F3E;
+    padding:1.6rem 0;
+}
+.footer-row{    
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.footer-col h4{
+    font-size: 18px;
+}
+.footer-col p{
+    font-size: 14px;
+}
