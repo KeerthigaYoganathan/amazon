@@ -1,0 +1,16 @@
+export let clothingArr = [{id:1, thumbnailImg:"https://m.media-amazon.com/images/I/81sT2bFw6bL._AC_SY200_.jpg"},
+{id:2, thumbnailImg:"https://m.media-amazon.com/images/I/61cEaN+s8zL._AC_SY200_.jpg"},
+{id:3, thumbnailImg: "https://m.media-amazon.com/images/I/61Q13fPs1lL._AC_SY200_.jpg"},
+{id:4, thumbnailImg:"https://m.media-amazon.com/images/I/71WDs7B841L._AC_SY200_.jpg"},
+{id:5, thumbnailImg:"https://m.media-amazon.com/images/I/7167+2Yq+1L._AC_SY200_.jpg"},
+{id:6, thumbnailImg:"https://m.media-amazon.com/images/I/51i8HCjFaSL._AC_SY200_.jpg"},
+{id:7, thumbnailImg:"https://m.media-amazon.com/images/I/81xR5DygQiL._AC_SY200_.jpg"},
+{id:8, thumbnailImg:"https://m.media-amazon.com/images/I/61VXOrqsTyS._AC_SY200_.jpg"},
+{id:9, thumbnailImg:"https://m.media-amazon.com/images/I/718lKibkAFL._AC_SY200_.jpg"},
+{id:10, thumbnailImg:"https://m.media-amazon.com/images/I/715RjfQuRZL._AC_SY200_.jpg"},
+{id:11, thumbnailImg:"https://m.media-amazon.com/images/I/710obimyQtL._AC_SY200_.jpg"},
+{id:12, thumbnailImg:"https://m.media-amazon.com/images/I/718QLqyNfzL._AC_SY200_.jpg"},
+{id:13, thumbnailImg:"https://m.media-amazon.com/images/I/81XdPLGxJAL._AC_SY200_.jpg"},
+{id:14, thumbnailImg:"https://m.media-amazon.com/images/I/61Nn7FcOqBL._AC_SY200_.jpg"},
+{id:15, thumbnailImg:"https://m.media-amazon.com/images/I/81+oQBvBR-L._AC_SY200_.jpg"}
+]

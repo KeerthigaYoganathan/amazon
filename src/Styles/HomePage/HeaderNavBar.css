@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+}
+.header-sec{
+    background-color: #131921;
+}
+.header-container{
+    width: 100%;
+    margin:0 auto;
+    color: #fff;
+}
+.header-row{
+    display: flex;
+    gap: 16px;
+}
+.header-amzn-logo{
+    width: 10%;
+}
+.header-nav-logo{
+    width: 100%;
+    /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg); */
+}
+.header-loc{
+    width: 14%;
+    display: flex;
+}
+.header-delivery-loc{
+    font-size: 12px;
+}
+.header-update-loc{
+    font-size: 16px;
+}
+.search-bar{
+    width: 50%;
+}
+.header-sign-in-details{
+    width: 10%;
+}
+.header-sign-in-details p i{
+    font-size: 12px;
+    
+}
+.header-hlo-signin{
+    font-size: 12px;
+}
+.header-accnt-lists{
+    font-size: 16px;
+}
+.header-returns{
+    font-size: 12px;
+}
+.header-orders{
+    font-size: 16px;
+}
+.returns-orders{
+    width: 8%;
+}
+.header-cart{
+    width: 8%;
+}
+.header-cart i{
+    font-size: 1.8rem;
+}
+
+
+/* Nav Bar Sec */
+.nav-bar-sec{
+    background-color: #232F3F;
+}
+.nav-bar-container{
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+}
+.nav-bar-row{
+    display: flex;
+    gap: 16px;
+    text-align: center;
+}
+.nav-bar-wtch-now{
+    width:30%;
+}

@@ -1,0 +1,57 @@
+.todays-deals-sec{
+    background: #fff;
+}
+.todays-deals-cards-col{
+    padding: 12px;
+}
+.todays-deal-off-row{
+    display: flex;
+}
+.todays-deals-off-percent{
+    font-size: 12px;
+    background: #CC0C39;
+    color: #fff;
+    padding: 4px 6px;
+}
+.todays-deals-ltd{
+    color: #CC0C39;
+    font-size: 12px;
+    padding: 8px;
+}
+.todays-deals-price{
+    font-size: 18px;
+}
+.todays-deals-product-name{
+    font-size: 13px;
+}
+/* .slick-prev:before, .slick-next:before {
+    font-size: 40px;
+    color: #a39d9d;
+}
+.slick-prev {
+    left: -31px;
+}
+.slick-next {
+    right: -33px;
+} */
+.slick-next, .slick-prev {
+    align-items: center!important;
+    background: #999!important;
+    border: none;
+    border-radius: 18px!important;
+    color: #fff!important;
+    cursor: pointer;
+    display: flex!important;
+    font-size: 0;
+    height: 19px;
+    justify-content: center!important;
+    line-height: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    width: 19px;
+}
+.slick-prev {
+    left: -25px;
+}
