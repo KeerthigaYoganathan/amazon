@@ -73,6 +73,20 @@ const HeaderNavBar = () => {
               <p>Toys & Games</p>
               <p className="fw-bold ms-5 fs-5nav-bar-wtch-now">The Idea Of You - Watch now</p>
           </div>
+          <div className="mobile-nav-menu">
+              <span className="mobile-nav-toggle-btn">
+                 <i class="bi bi-list"></i>
+              </span>
+              <div className="mobile-nav-bar">
+                  <ul>
+                      <li>Trending</li>
+                      <li>Best Sellers</li>
+                      <li>New Releases</li>
+                  <li>Movers & Shakers</li>
+                  </ul>
+                  
+              </div>
+          </div>
         </div>
       </section>
 

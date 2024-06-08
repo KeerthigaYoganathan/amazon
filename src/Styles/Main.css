@@ -3,3 +3,5 @@
 @import "./HomePage/ClientsCard.css";
 @import "./HomePage/TodaysDeals.css";
 @import "./HomePage/Footer.css";
+@import "./ProductListingPage/FilterMenu.css";
+@import "./ProductListingPage/ProductListing.css";

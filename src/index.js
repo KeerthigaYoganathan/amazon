@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "../src/Styles/Main.css";
 import HomePage from './Components/HomePage/HomePage';
+import ProductListingPage from './Components/ProductListingPage/ProductListingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-  <HomePage/>
+  <ProductListingPage />
+
   </>
 );
 

@@ -1,0 +1,26 @@
+.product-listing-sec{
+    flex: 1;
+    background-color: #fff;
+}
+.product-listing-col{
+    border-radius: 4px;    
+}
+.product-listing-box{
+    border: 1px solid #c5bdbd;
+}
+.product-listing-image{
+    position: relative;
+}
+.product-listing-image::before {
+    background: #c5bdbd;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+}
+.product-listing-details{
+    padding: 8px;
+}
