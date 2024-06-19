@@ -24,3 +24,6 @@
 .product-listing-details{
     padding: 8px;
 }
+.product-listing-rating i{
+    color: #FFA41C;
+}

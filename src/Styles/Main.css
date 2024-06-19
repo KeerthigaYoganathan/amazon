@@ -5,3 +5,7 @@
 @import "./HomePage/Footer.css";
 @import "./ProductListingPage/FilterMenu.css";
 @import "./ProductListingPage/ProductListing.css";
+
+body{
+    font-family: "PT Sans", sans-serif;
+}
