@@ -27,3 +27,6 @@
 .product-listing-rating i{
     color: #FFA41C;
 }
+.product-listing-rating span{
+    color: rgb(0, 113, 133);
+}
