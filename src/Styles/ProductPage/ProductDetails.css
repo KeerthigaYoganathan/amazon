@@ -1,0 +1,36 @@
+/* .product-details-img-col{
+    width: 25%;
+}
+.product-details-desc-col{
+    width: 50%;
+} */
+.product-details-desc-box .product-details-product-name{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.product-details{
+    font-size: 15px;
+    font-weight: 500;
+}
+.product-details .product-details-no-of-ratings{
+    color: black;
+}
+.product-details .product-detais-no-of-items{
+    border-bottom: 1px solid rgb(209, 204, 204);
+}
+.product-detais-item-color{
+    width: 80%;
+    border-bottom: 1px solid rgb(209, 204, 204);
+}
+.product-details-alexa{
+    width:80%;
+    border-bottom: 1px solid rgb(209, 204, 204);
+}
+.alexa-logo.col-lg-2 {
+    padding: 12px;
+}
+.alexa-desc.col-lg-10 {
+    padding: 12px;
+}
+

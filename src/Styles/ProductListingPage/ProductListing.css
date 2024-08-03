@@ -6,7 +6,7 @@
     border-radius: 4px;    
 }
 .product-listing-box{
-    border: 1px solid #c5bdbd;
+    border: 1px solid #dddada;
 }
 .product-listing-image{
     position: relative;
@@ -24,9 +24,21 @@
 .product-listing-details{
     padding: 8px;
 }
+.product-listing-name{
+    font-size: 16px;
+    font-weight: 500;
+}
 .product-listing-rating i{
     color: #FFA41C;
 }
 .product-listing-rating span{
     color: rgb(0, 113, 133);
+    /* padding-left: 8px; */
+}
+.product-list-add-to-cart-btn{
+    background-color: #FFD814;
+    border:#FFD814;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 14px;
 }

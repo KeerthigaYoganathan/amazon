@@ -6,12 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import "../src/Styles/Main.css";
 import HomePage from './Components/HomePage/HomePage';
 import ProductListingPage from './Components/ProductListingPage/ProductListingPage';
+import ProductPage from './Components/ProductPage/ProductPage';
+import Router from './Router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-  <ProductListingPage />
-
+  
+  {/* <ProductPage/> */}
+  <Router/>
   </>
 );
 

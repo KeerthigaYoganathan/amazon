@@ -5,6 +5,8 @@
 @import "./HomePage/Footer.css";
 @import "./ProductListingPage/FilterMenu.css";
 @import "./ProductListingPage/ProductListing.css";
+@import "./ProductPage/ProductDetails.css";
+@import "./ProductPage/AddtoCart.css";
 
 body{
     font-family: "PT Sans", sans-serif;

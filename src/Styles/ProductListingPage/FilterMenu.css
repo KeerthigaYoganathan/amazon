@@ -1,4 +1,35 @@
+.filter-sec{
+    margin: 0 auto;
+}
+.filter-container{
+    padding: 10px;
+}
 .filter-menu-sec{
     width: 25%;
-    background-color: aqua;
+    background-color: #fff;
+}
+.filter-box h4{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.filter-box label{
+    padding-left: 8px;
+    font-size: 14px;
+
+}
+.filter-availability-stock{
+    margin: 8px 0;
+}
+.filter-pricing{
+    margin: 8px 0;
+}
+.filter-best-selling{
+    margin: 8px 0;
+}
+.filter-pricing-min{
+    width: 50%;
+}
+.filter-pricing-max{
+    width: 50%;
 }
