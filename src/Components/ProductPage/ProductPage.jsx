@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {toysGamesArr} from '../../JsonData/ToysGames';
+import HeaderNavBar from '../HomePage/HeaderNavBar';
 
 
 
@@ -48,11 +49,12 @@ const ProductPage = () => {
 
   return (
     <>
-    <div className='d-flex'>
-        <div className='product-details-sec'>
+    <HeaderNavBar/>
+    <div className='row' style={{maxWidth: "100%", marginTop:"14px"}}>
+        <div className='product-details-sec col-lg-9'>
             <ProductDetails/>
         </div>
-        <div className='add-to-cart-sec col-lg-2'>
+        <div className='add-to-cart-sec col-lg-3'>
             <AddtoCart/>
         </div>
     </div>
