@@ -4,19 +4,21 @@ import { useSearchParams } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
 
-const ProductDetails = () => {
-    const reduxState = useSelector(({ data }) => data);
-    const tempHeadphonesArr = [headPhonesArr[0]];    
-    const[data, setData] = useState(tempHeadphonesArr);
+const ProductDetails = ({details}) => {
+    
+    
+//     const reduxState = useSelector(({ data }) => data);
+//     const tempHeadphonesArr = [headPhonesArr[0]];    
+//     const[data, setData] = useState(tempHeadphonesArr);
   
-  const [searchParams] = useSearchParams();
+//   const [searchParams] = useSearchParams();
   
-    useEffect(()=>{
-        let sp = searchParams.get("id");
-    let tempState = reduxState?.jsonData?.headPhones?.filter((item, index)=>item?.id==sp)
-    console.log(tempState, "fri");
-        setData(tempState);
-  }, [])
+//     useEffect(()=>{
+//         let sp = searchParams.get("id");
+//     let tempState = reduxState?.jsonData?.headPhones?.filter((item, index)=>item?.id==sp)
+//     console.log(tempState, "fri");
+//         setData(tempState);
+//   }, [])
 
     
 
@@ -25,11 +27,11 @@ const ProductDetails = () => {
     <section className='sec'>
         <div className='product-details-container'>
             
-               {data.map((item, index)=>{
+               {details?.map((item, index)=>{
                     return(
                         <div className='row m-0'>
-                            <div key={item.id} className='col-lg-4'>
-                                <img src={item.thumbnailImg}/>
+                            <div key={item?.id} className='col-lg-4'>
+                                <img src={item?.thumbnailImg}/>
                             </div>
                             <div className='col-lg-8'>
                             <p className='product-details-product-name' style={{fontSize:"26px", lineHeight:"1.3"}}>{item.name}</p>
