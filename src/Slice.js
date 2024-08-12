@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { headPhonesArr } from "./JsonData/HeadPhones";
+import {smartPhonesArr} from './JsonData/Mobiles';
 
 export const slice = createSlice({
   name: "sample",
   initialState: {
-    arr: [],
-    editIndex: null,
-    jsonData: {
+     
+    userTypedValue:null,
+    productData: {
         headPhones: headPhonesArr,
-        
+        smartPhones: smartPhonesArr,
     },
   },
   reducers: {

@@ -1,12 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { headPhonesArr } from "../../JsonData/HeadPhones";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 const ProductListingArea = ({ filterMenuData }) => {
   const navigate = useNavigate();
-  const [data, setData] = useState(headPhonesArr);
+  const [data, setData] = useState([]);
+  const reduxState = useSelector(({ data }) => data);
+  
+  
+  // useEffect(()=>{
+  //   userSearchedData();
+  // }, [])
+
+  const userSearchedData = () =>{
+    const tempData = Object.keys(reduxState?.productData);
+    
+    // reduxState?.userTypedValue.startsWith()
+    tempData.map((item, index)=>{
+      if(item?.startsWith(reduxState?.userTypedValue)){
+        const searchProduct = reduxState?.productData[item];
+        setData(searchProduct);
+        
+          
+      }
+    })
+  }
+
   useEffect(() => {
     filterListingFn();
+    userSearchedData();
   }, [filterMenuData]);
   const filterListingFn = () => {
     let tempData = headPhonesArr;
@@ -72,7 +96,7 @@ const ProductListingArea = ({ filterMenuData }) => {
       <section className="product-listing-area-sec">
         <div className="product-listing-area-container">
           <div className="product-listing-row row m-0">
-            {data.map((item, index) => {
+            {data?.map((item, index) => {
               return (
                 <div
                   key={item.id}

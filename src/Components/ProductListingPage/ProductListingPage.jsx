@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const ProductListingPage = () => {
 
   const reduxState = useSelector(({ data }) => data);
-console.log(reduxState, "test");
+
 
 
   return (

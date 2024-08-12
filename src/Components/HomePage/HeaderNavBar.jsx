@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../Assets/images/amazn_logo.JPG";
 import Banner from "./Banner";
 import ClientsCard from "./ClientsCard";
 import TodaysDeals from "./TodaysDeals";
 import BestSellers from "./Grocery";
 import Clothing from "./Clothing";
-
+import { useDispatch } from "react-redux";
+import { updateReduxState } from "../../Slice";
+import { useNavigate } from "react-router-dom";
 
 const HeaderNavBar = () => {
+
+  const [userInput, setUserInput] = useState(null);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleChange = (e) =>{
+      
+    setUserInput(e);
+    
+
+  }
+
+  const handleClick = () => {
+    console.log( "input test"); 
+    dispatch(updateReduxState({ userTypedValue: userInput }));
+    navigate("/productlisting");
+  }
+
+
   return (
     <>
       <section className="header-sec py-2">
@@ -33,9 +54,11 @@ const HeaderNavBar = () => {
                   placeholder="Search Amazon.ca"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
+                  onChange={(e)=>{handleChange(e.target.value)}}
                 />
-                <span class="input-group-text" id="basic-addon2" style={{background: "#FEBD69"}}>
-                <i class="bi bi-search"></i>
+                <span class="input-group-text" id="basic-addon2" style={{background: "#FEBD69"}} onClick={()=>{handleClick()}}
+                >
+                <i class="bi bi-search" ></i>
                 </span>
               </div>              
             </div>
