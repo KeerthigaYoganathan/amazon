@@ -11,6 +11,7 @@ export const slice = createSlice({
         headPhones: headPhonesArr,
         smartPhones: smartPhonesArr,
     },
+    cartData:[],
   },
   reducers: {
     updateReduxState: (state, action) => {

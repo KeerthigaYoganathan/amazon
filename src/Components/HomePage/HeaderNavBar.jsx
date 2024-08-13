@@ -23,7 +23,6 @@ const HeaderNavBar = () => {
   }
 
   const handleClick = () => {
-    console.log( "input test"); 
     dispatch(updateReduxState({ userTypedValue: userInput }));
     navigate("/productlisting");
   }

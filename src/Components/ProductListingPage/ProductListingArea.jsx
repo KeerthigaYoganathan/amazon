@@ -17,7 +17,9 @@ const ProductListingArea = ({ filterMenuData }) => {
   const userSearchedData = () =>{
     const tempData = Object.keys(reduxState?.productData);
     
-    // reduxState?.userTypedValue.startsWith()
+    
+    
+   
     tempData.map((item, index)=>{
       if(item?.startsWith(reduxState?.userTypedValue)){
         const searchProduct = reduxState?.productData[item];
@@ -63,7 +65,7 @@ const ProductListingArea = ({ filterMenuData }) => {
       tempData = tempData;
     }
     setData(tempData);
-    console.log(tempData);
+    
   };
   const dateFormatFn = (dates) => {
     const date = new Date();
@@ -89,7 +91,7 @@ const ProductListingArea = ({ filterMenuData }) => {
     return `${day}, ${month} ${dateNum}`;
   };
   const handleGoNext = (item) => {
-    navigate(`/product?id=${item?.id}`)
+    navigate(`/Product?id=${item?.id}`)
   };
   return (
     <>

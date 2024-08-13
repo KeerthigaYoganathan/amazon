@@ -25,7 +25,7 @@ const ProductPage = () => {
   
     useEffect(()=>{
         let sp = searchParams.get("id");
-    let tempState = reduxState?.jsonData?.headPhones?.filter((item, index)=>item?.id==sp)
+    let tempState = reduxState?.productData?.headPhones?.filter((item, index)=>item?.id==sp)
     
         setData(tempState);
   }, [])
