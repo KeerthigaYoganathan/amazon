@@ -34,7 +34,7 @@ const AddtoCart = ({ details }) => {
       const currentCartData = reduxState?.cartData;
       const updatedCartData = [...currentCartData, item];
       dispatch(updateReduxState({cartData:updatedCartData}))
-      console.log(updatedCartData, "data");
+      // console.log(updatedCartData, "data");
       
   }
 

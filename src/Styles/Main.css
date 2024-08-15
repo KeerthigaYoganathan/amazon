@@ -7,6 +7,7 @@
 @import "./ProductListingPage/ProductListing.css";
 @import "./ProductPage/ProductDetails.css";
 @import "./ProductPage/AddtoCart.css";
+@import "./CartPage/CartPage.css";
 
 body{
     font-family: "PT Sans", sans-serif;

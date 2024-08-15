@@ -1,36 +1,26 @@
-import React,{useEffect, useState} from 'react'
-import ProductDetails from './ProductDetails'
-import AddtoCart from './AddtoCart'
+import React, { useEffect, useState } from "react";
+import ProductDetails from "./ProductDetails";
+import AddtoCart from "./AddtoCart";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {toysGamesArr} from '../../JsonData/ToysGames';
-import HeaderNavBar from '../HomePage/HeaderNavBar';
-import { headPhonesArr } from '../../JsonData/HeadPhones';
-import { useSearchParams } from 'react-router-dom';
+import { toysGamesArr } from "../../JsonData/ToysGames";
+import HeaderNavBar from "../HomePage/HeaderNavBar";
+import { useSearchParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-
-
-
 const ProductPage = () => {
-
   const reduxState = useSelector(({ data }) => data);
-    const tempHeadphonesArr = [headPhonesArr[0]];    
-    const[data, setData] = useState(tempHeadphonesArr);
-    
-    
-  
+  const [data, setData] = useState([]);
   const [searchParams] = useSearchParams();
-  
-    useEffect(()=>{
-        let sp = searchParams.get("id");
-    let tempState = reduxState?.productData?.headPhones?.filter((item, index)=>item?.id==sp)
-    
-        setData(tempState);
-  }, [])
-  
-
+  useEffect(() => {
+    const queryParamId = searchParams.get("id");
+    const productCategory = searchParams.get("productCategory");
+    let tempState = reduxState?.productData[productCategory]?.filter(
+      (item, index) => item?.id == queryParamId
+    );
+    setData(tempState);
+  }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -65,22 +55,27 @@ const ProductPage = () => {
       },
     ],
   };
-
   return (
     <>
-    <HeaderNavBar/>
-    <div className='row' style={{maxWidth: "100%", marginTop:"14px"}}>
-        <div className='product-details-sec col-lg-9'>
-             <ProductDetails details={data}/>
+      <HeaderNavBar />
+      <div className="row" style={{ maxWidth: "100%", marginTop: "14px" }}>
+        <div className="product-details-sec col-lg-9">
+          <ProductDetails details={data} />
         </div>
-        <div className='add-to-cart-sec col-lg-3'>
-            <AddtoCart details={data}/>
+        <div className="add-to-cart-sec col-lg-3">
+          <AddtoCart details={data} />
         </div>
-    </div>
-    <section className='toys-games-sec pt-3 m-3' style={{background: "#fff"}}>
-            <div className='toys-games-container' style={{ width: "95%", margin: "0 auto" }}>
-                <h4>Best Sellers in Toys & Games</h4>
-                <Slider {...settings}>
+      </div>
+      <section
+        className="toys-games-sec pt-3 m-3"
+        style={{ background: "#fff" }}
+      >
+        <div
+          className="toys-games-container"
+          style={{ width: "95%", margin: "0 auto" }}
+        >
+          <h4>Best Sellers in Toys & Games</h4>
+          <Slider {...settings}>
             {toysGamesArr?.map((item, index) => {
               return (
                 <>
@@ -91,21 +86,16 @@ const ProductPage = () => {
                         style={{ height: "220px" }}
                         src={item.thumbnailImg}
                       />
-                     
                     </div>
                   </div>
                 </>
               );
             })}
           </Slider>
-               
-            </div>
-        </section>
-        
+        </div>
+      </section>
     </>
-    
-    
-  )
-}
+  );
+};
 
-export default ProductPage
+export default ProductPage;

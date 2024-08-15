@@ -3,33 +3,21 @@ import { headPhonesArr } from "../../JsonData/HeadPhones";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-
 const ProductListingArea = ({ filterMenuData }) => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
+  const [productCategory, setProductCategory] = useState(null);
   const reduxState = useSelector(({ data }) => data);
-  
-  
-  // useEffect(()=>{
-  //   userSearchedData();
-  // }, [])
-
-  const userSearchedData = () =>{
+  const userSearchedData = () => {
     const tempData = Object.keys(reduxState?.productData);
-    
-    
-    
-   
-    tempData.map((item, index)=>{
-      if(item?.startsWith(reduxState?.userTypedValue)){
+    tempData.map((item, index) => {
+      if (item?.startsWith(reduxState?.userTypedValue)) {
         const searchProduct = reduxState?.productData[item];
         setData(searchProduct);
-        
-          
+        setProductCategory(item);
       }
-    })
-  }
-
+    });
+  };
   useEffect(() => {
     filterListingFn();
     userSearchedData();
@@ -65,7 +53,6 @@ const ProductListingArea = ({ filterMenuData }) => {
       tempData = tempData;
     }
     setData(tempData);
-    
   };
   const dateFormatFn = (dates) => {
     const date = new Date();
@@ -91,7 +78,7 @@ const ProductListingArea = ({ filterMenuData }) => {
     return `${day}, ${month} ${dateNum}`;
   };
   const handleGoNext = (item) => {
-    navigate(`/Product?id=${item?.id}`)
+    navigate(`/product?id=${item?.id}&productCategory=${productCategory}`);
   };
   return (
     <>
