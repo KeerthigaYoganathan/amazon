@@ -33,7 +33,7 @@ const AddtoCart = ({ details }) => {
   const cartFn = (item) => {
       const currentCartData = reduxState?.cartData;
       const updatedCartData = [...currentCartData, item];
-      dispatch(updateReduxState({cartData:updatedCartData}))
+      dispatch(updateReduxState({cartData:updatedCartData}));
       // console.log(updatedCartData, "data");
       
   }
