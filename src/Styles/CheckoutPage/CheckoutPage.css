@@ -1,0 +1,10 @@
+.checkout-pg-row{
+    background-image: url("https://images-na.ssl-images-amazon.com/images/G/31/common/sprites/tspc-header-bkg.png");
+    padding: 20px;
+    align-items: center;
+}
+.checkout-pg-row img{
+    width: 140px;
+    height: auto;
+    max-width: 100%;
+}

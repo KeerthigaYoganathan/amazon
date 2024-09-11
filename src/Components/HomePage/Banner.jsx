@@ -12,47 +12,47 @@ const Banner = () => {
     <>
       <section className="banner-sec">
         <div className="banner-container">
-          <div id="carouselExample" class="carousel slide">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src={Banner1} class="d-block w-100" alt="..." />
+          <div id="carouselExample" className="carousel slide">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src={Banner1} className="d-block w-100" alt="..." />
             </div>
-            <div class="carousel-item">
-              <img src={Banner2} class="d-block w-100" alt="..." />
+            <div className="carousel-item">
+              <img src={Banner2} className="d-block w-100" alt="..." />
             </div>
-            <div class="carousel-item">
-              <img src={Banner3} class="d-block w-100" alt="..." />
+            <div className="carousel-item">
+              <img src={Banner3} className="d-block w-100" alt="..." />
             </div>
-            <div class="carousel-item">
-              <img src={Banner4} class="d-block w-100" alt="..." />
+            <div className="carousel-item">
+              <img src={Banner4} className="d-block w-100" alt="..." />
             </div>
-            <div class="carousel-item">
-              <img src={Banner5} class="d-block w-100" alt="..." />
+            <div className="carousel-item">
+              <img src={Banner5} className="d-block w-100" alt="..." />
             </div>
-            <div class="carousel-item">
-              <img src={Banner6} class="d-block w-100" alt="..." />
+            <div className="carousel-item">
+              <img src={Banner6} className="d-block w-100" alt="..." />
             </div>
-            <div class="carousel-item">
-              <img src={Banner7} class="d-block w-100" alt="..." />
+            <div className="carousel-item">
+              <img src={Banner7} className="d-block w-100" alt="..." />
             </div>
           </div>
           <button
-            class="carousel-control-prev"
+            className="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next"
+            className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
           </button>
           </div>
         </div>

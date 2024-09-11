@@ -3,12 +3,18 @@
     margin: 24px 12px;
     height: 20%;
 }
-.cart-page-col-right{
-   
+.cart-page-col-right {
     margin-top: 24px;
     margin-left: 10px;
+    margin-right: 20px;
 }
-.cart-add-card img{
-    width: 70px;
-    height: 70px
+.cart-you-might-also-like {
+    margin-top: 24px;
+    margin-left: 3px;
+    margin-right: 1px;
 }
+
+/* .cart-add-card img{
+    width: 50px;
+    height: 50px
+} */

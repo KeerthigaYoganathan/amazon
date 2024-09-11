@@ -1,0 +1,20 @@
+.adrs-box {
+    position: relative;
+    z-index: 10; 
+  }
+.adrs-form-sec {
+    padding: 20px;
+    background-color: #3322d4;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    z-index: 5; /* Ensure this doesn't interfere with the clickable area */
+}
+p.text-base {
+    cursor: pointer; /* Ensure the pointer changes to a hand icon */
+    padding: 10px;
+    background-color: #be1e1e; /* Add padding and background to make it easier to click */
+}
+  
+.bi-plus {
+    margin-right: 5px; /* Space between the plus icon and text */
+}

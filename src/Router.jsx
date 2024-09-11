@@ -6,6 +6,7 @@ import ProductPage from './Components/ProductPage/ProductPage';
 import { Provider } from 'react-redux';
 import {store} from './Store'
 import { CartPage } from './Components/CartPage/CartPage';
+import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 
 const Router = () => {
   return (
@@ -18,6 +19,7 @@ const Router = () => {
                 <Route path="/productlisting" element={<ProductListingPage/>}/>
                 <Route path="/product" element={<ProductPage/>}/>
                 <Route path="/cart" element={<CartPage/>}/>
+                <Route path="/checkout" element={<CheckoutPage/>}/>
             </Routes>
         </BrowserRouter>
       </Provider>
