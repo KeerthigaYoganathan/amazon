@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 const AddressFormModal = ({handleShow, handleClose, show, formData, setFormData, handleSubmit}) => {
   return (
     <>
-        {JSON.stringify(formData, null, 1)}
+        
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Add a address</Modal.Title>
@@ -41,7 +41,7 @@ const AddressFormModal = ({handleShow, handleClose, show, formData, setFormData,
                 <Form>
       <Form.Group className="mb-3">
         <Form.Label>Full name</Form.Label>
-        <Form.Control type="text" placeholder="Enter name" value={formData.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}/>
+        <Form.Control type="text" placeholder="Enter name" value={formData?.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}/>
         {/* <Form.Text className="text-muted">
           We'll never share your email with anyone else.
         </Form.Text> */}
@@ -49,12 +49,12 @@ const AddressFormModal = ({handleShow, handleClose, show, formData, setFormData,
 
       <Form.Group className="mb-3">
         <Form.Label>Phone number</Form.Label>
-        <Form.Control type="text" placeholder="Enter phone number" value={formData.phoneNo} onChange={(e) => setFormData({ ...formData, phoneNo: e.target.value })}/>
+        <Form.Control type="text" placeholder="Enter phone number" value={formData?.phoneNo} onChange={(e) => setFormData({ ...formData, phoneNo: e.target.value })}/>
       </Form.Group>
 
       <Form.Group className="mb-3">
         <Form.Label>Address</Form.Label>
-        <Form.Control type="text" placeholder="Enter address" value={formData.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })}/>
+        <Form.Control type="text" placeholder="Enter address" value={formData?.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })}/>
       </Form.Group>
 
       <Form.Group className="mb-3">

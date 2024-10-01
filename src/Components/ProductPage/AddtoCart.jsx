@@ -3,10 +3,12 @@ import { headPhonesArr } from "../../JsonData/HeadPhones";
 import { useSearchParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { updateReduxState } from "../../Slice";
+import {useNavigate} from "react-router-dom";
 
 const AddtoCart = ({ details }) => {
   const reduxState = useSelector(({data})=> data);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const dateFormatFn = (dates) => {
     const date = new Date();
     date.setDate(date.getDate() + dates);
@@ -35,7 +37,7 @@ const AddtoCart = ({ details }) => {
       const updatedCartData = [...currentCartData, item];
       dispatch(updateReduxState({cartData:updatedCartData}));
       // console.log(updatedCartData, "data");
-      
+      navigate("/cart");
   }
 
   return (

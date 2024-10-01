@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 import {store} from './Store'
 import { CartPage } from './Components/CartPage/CartPage';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
+import YourOrders from './Components/YourOrders/YourOrders';
+import TrackingPage from './Components/TrackingPage/TrackingPage';
 
 const Router = () => {
   return (
@@ -20,6 +22,8 @@ const Router = () => {
                 <Route path="/product" element={<ProductPage/>}/>
                 <Route path="/cart" element={<CartPage/>}/>
                 <Route path="/checkout" element={<CheckoutPage/>}/>
+                <Route path="/yourorders" element={<YourOrders/>}/>
+                <Route path="/trackingpage" element={<TrackingPage/>}/>
             </Routes>
         </BrowserRouter>
       </Provider>
