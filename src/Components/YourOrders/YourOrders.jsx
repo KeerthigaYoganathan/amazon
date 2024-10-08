@@ -1,7 +1,12 @@
 import React from "react";
 import HeaderNavBar from "../HomePage/HeaderNavBar";
+import {useNavigate} from "react-router-dom";
 
 const YourOrders = () => {
+  const navigate = useNavigate();
+  const trackingFn = () => {
+    navigate("/trackingpage");
+  }
   return (
     <>
       <HeaderNavBar />
@@ -55,7 +60,7 @@ const YourOrders = () => {
                     fontSize: "14px",
                     color: "#000",
                     padding: "6px 8px",
-                  }}>Track Package</p>
+                  }} onClick={(e)=>{trackingFn()}}>Track Package</p>
                       <p className="rounded-2xl" style={{
                     border: "1px solid #A8AAAA",
                     padding: "6px",

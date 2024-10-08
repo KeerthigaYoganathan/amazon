@@ -1,16 +1,29 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 
 export const CartPage = () => {
   const reduxState = useSelector(({ data }) => data);
+  
+  
   const cartItem = reduxState?.cartData;
-  const [data, setData] = useState(cartItem);
+  const navigate = useNavigate();
+  const checkoutFn = (item) => {
+      navigate("/checkout");
+  }
+  const calculatePrice = () =>{
+    let price=0;
+    cartItem?.map((item)=>{
+      price = price + item?.buyingPrice;
+    })
+    return price;
+  }
 
   return (
     <section className="cart-page-sec" style={{ background: "#EAEDED" }}>
-      {data.map((item, index) => {
-        return (
+      
+        
           <div className="cart-page-container flex flex-col items-center">
             <div
               className="cart-add-card flex items-center h-28 mt-8"
@@ -54,7 +67,9 @@ export const CartPage = () => {
                     <p style={{ color: "#565959", fontSize: "16px" }}>Price</p>
                   </div>
                 </div>
-                <div
+                {cartItem?.map((item, key)=>{
+                    return(
+                      <div
                   className="cart-product-row flex justify-between my-6"
                 >
                   <div className="cart-product-img flex items-center w-1/4">
@@ -64,10 +79,10 @@ export const CartPage = () => {
                       className="item-checkbox"
                     ></input>
                     <img
-                      src="https://m.media-amazon.com/images/I/61vJtKbAssL._AC_UL320_.jpg"
-                      className="h-48 w-48"
+                      src={item?.thumbnailImg}
                       style={{ padding: "12px" }}
                     />
+                
                   </div>
                   <div className="cart-product-details w-2/4">
                     <p style={{ fontSize: "22px", lineHeight: "1.3" }}>
@@ -114,12 +129,14 @@ export const CartPage = () => {
                     <p className="font-bold">{item.buyingPrice}</p>
                   </div>
                  </div>
+                    )
+                })}
                  <div style={{
                     borderBottom: "1px solid rgb(209, 204, 204)",
                     paddingBottom: "8px",
                   }}></div>
                 <div className="cart-sub-total flex justify-end">
-                    <p key={item?.id} className="text-lg">Subtotal(1 item): <span className="font-bold">${item.buyingPrice}</span></p>
+                    <p className="text-lg">Subtotal({cartItem?.length} item): <span className="font-bold">${calculatePrice()}</span></p>
                 </div>
               </div>
               <div
@@ -127,7 +144,7 @@ export const CartPage = () => {
                 
               >
                 <div className="cart-total flex flex-col justify-center items-center" style={{ background: "#FFFF" }}>
-                  <p style={{fontSize:"21px", marginTop: "12px"}}>Subtotal(1 item): ${item.buyingPrice}</p>
+                  <p style={{fontSize:"21px", marginTop: "12px"}}>Subtotal({cartItem?.length}): ${calculatePrice()}</p>
                   <p style={{
                     background: "#FFD814",
                     border: "1px solid rgb(209, 204, 204)",
@@ -137,7 +154,7 @@ export const CartPage = () => {
                     textAlign: "center",
                     width:"70%",
                     marginBottom:"22px"
-                  }}>Proceed to Checkout</p>
+                  }} onClick={(e)=>{checkoutFn("")}} className="cursor-pointer">Proceed to Checkout</p>
                 </div>
                 <div className="cart-prime-delivery my-4 flex p-3 gap-4" style={{background:"#FFFF"}}>
                   <div className="prime-delivery-img w-16">
@@ -164,14 +181,14 @@ export const CartPage = () => {
                       <img src="https://m.media-amazon.com/images/I/61cm-9ZjI0L._AC_UL320_.jpg" />
                     </div>
                     <div className="might-like-product-details">
-                      <p>{item.name}</p>
+                      {/* <p>{item.name}</p> */}
                     </div>
                 </div>
               </div>
             </div>
           </div>
-        );
-      })}
+        
+     
     </section>
   );
 };

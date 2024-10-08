@@ -3,13 +3,32 @@ import ShippingAddress from "./ShippingAddress";
 import PaymentMethod from "./PaymentMethod";
 import ItemShipping from "./ItemShipping";
 import logo1 from "../../Assets/images/checkout_logo.JPG";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 
 const CheckoutPage = () => {
+  const reduxState = useSelector(({ data }) => data);
+  const data = reduxState?.cartData;
+  const navigate = useNavigate();
+  const yourOrdersFn = (item) => {
+    navigate('/yourorders');
+  }
+  const calculatePrice = () =>{
+    let price=0;
+    data?.map((item)=>{
+      price = price + item?.buyingPrice;
+    })
+    return price;
+  }
   return (
     <>
       <section className="checkout-page-sec">
         <div className="checkout-page-container">
-          <div className="checkout-page-header-row ml-6 mr-6">
+          {data.map((item, index)=>{
+            return(
+                <>
+                <div className="checkout-page-header-row ml-6 mr-6">
             <div className="checkout-pg-row flex justify-around">
               <img src={logo1} className="checkout-pg-logo" alt="..." />
               <p className="checkout-pg-heading text-3xl font-medium">
@@ -27,7 +46,7 @@ const CheckoutPage = () => {
             <div className="adrs-payment-item w-[60%]">
               <ShippingAddress />
               <PaymentMethod />
-              <p className="rounded-md !mt-4 ml-8" style={{
+              <p className="rounded-md !mt-4 ml-8 cursor-pointer" style={{
                     background: "#FFD814",
                     border: "#FFD814",
                     padding: "6px",
@@ -35,7 +54,7 @@ const CheckoutPage = () => {
                     color: "#000",
                     padding: "8px 12px",
                     display: "inline-block"
-                  }}>Place an order</p>
+                  }} onClick={(e)=>{yourOrdersFn(item)}}>Place an order</p>
             </div>
             <div
               className="order-summary w-[20%] rounded-md p-3 h-80"
@@ -45,7 +64,7 @@ const CheckoutPage = () => {
             >
               <div className="order-summary-shipping-box text-center">
                 <p
-                  className="rounded-2xl"
+                  className="rounded-2xl cursor-pointer"
                   style={{
                     background: "#FFD814",
                     border: "#FFD814",
@@ -54,6 +73,7 @@ const CheckoutPage = () => {
                     color: "#000",
                     padding: "8px 12px",
                   }}
+                  onClick={(e)=>{yourOrdersFn(item)}}
                 >
                   Use this payment method
                 </p>
@@ -76,8 +96,8 @@ const CheckoutPage = () => {
                   <p>Estimated PST/RST/QST:</p>
                 </div>
                 <div className="summary-price-details text-[12px] ">
-                  <p>$3.00</p>
-                  <p>$5.54</p>
+                  <p>${calculatePrice()}</p>
+                  <p>$0.00</p>
                   <p className="m-1 w-12" style={{ borderBottom: "1px solid #D5D9D9" }}></p>
                   <p>$8.54</p>
                   <p>$0.00</p>
@@ -86,13 +106,17 @@ const CheckoutPage = () => {
                 </div>
                 <div className="flex justify-between text-[#B82704] font-semibold">
                    <p>Order Total:</p>
-                   <p className="mr-5">$8.54</p>
+                   <p className="mr-5">${calculatePrice()}</p>
                 </div>
                 
               </div>
               
             </div>
           </div>
+                </>
+            )
+          })}
+          
         </div>
       </section>
     </>

@@ -100,7 +100,7 @@ const AddtoCart = ({ details }) => {
                 >
                   <p>Quantity: 1</p> <i className="bi bi-chevron-down"></i>
                 </div>
-                <p
+                <p className="cursor-pointer"
                   style={{
                     background: "#FFD814",
                     border: "1px solid rgb(209, 204, 204)",
